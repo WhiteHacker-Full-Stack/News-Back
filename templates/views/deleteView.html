@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+<h2>Kitobni O'chirish</h2>
+<p>Rostdan ham "{{ object.title }}" yangiligini o'chirmoqchimisiz?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">O'chirish</button>
+</form>
+<a href="{% url 'detail' object.slug %}">Orqaga</a>
+
+{% endblock content %}

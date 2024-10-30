@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ro'yxatdan o'tish muvaffaqiyatli tugadi
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h2 class="mb-4">Ro'yxatdan o'tish tugadi</h2>
+                <p>Sizning akkauntingiz muvaffaqiyatli yaratildi.</p>
+                <a href="{% url 'login' %}" class="btn btn-primary mt-3">Kirish sahifasiga o'tish</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

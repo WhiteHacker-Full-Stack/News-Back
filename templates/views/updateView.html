@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+<h2>Kitobni Yangilash</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Yangilash</button>
+</form>
+<a href="{% url 'detail' object.slug %}">Orqaga</a>
+
+{% endblock content %}

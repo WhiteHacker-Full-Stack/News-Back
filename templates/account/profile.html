@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Mening Profilim{% endblock %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4>Foydalanuvchi Profil</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="https://via.placeholder.com/150" alt="Profile Image" class="img-thumbnail rounded-circle">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>{{ user.username }}</h5>
+                            <p><strong>Biografiya:</strong> {{ user.profile.bio }}</p>
+                            <p><strong>Joylashuv:</strong> {{ user.profile.location }}</p>
+                            <p><strong>Tug‘ilgan sana:</strong> {{ user.profile.birth_date }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-end">
+                    <a href="{% url 'profile' %}" class="btn btn-warning">Profilni tahrirlash</a>
+                    <a href="{% url 'password_change' %}" class="btn btn-warning">Parolni ozgartirish</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
